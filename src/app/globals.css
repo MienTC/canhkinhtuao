@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-brand-green: #1a7a3c;
+  --color-brand-green-dark: #145f2e;
+  --color-brand-gold: #f4a800;
+  --color-brand-dark: #111111;
+  --color-brand-muted: #666666;
+  --color-brand-bg: #f8f8f6;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-brand-bg text-brand-dark font-body antialiased;
+    overflow-x: hidden;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold text-brand-dark;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .btn-primary {
+    @apply bg-brand-green hover:bg-brand-green-dark text-white px-8 py-3.5 rounded-sm font-bold uppercase tracking-widest text-xs transition-all inline-flex items-center justify-center;
+  }
+  
+  .btn-outline {
+    @apply border-2 border-brand-green text-brand-green hover:bg-brand-green hover:text-white px-8 py-3.5 rounded-sm font-bold uppercase tracking-widest text-xs transition-all inline-flex items-center justify-center;
+  }
+
+  .card-white {
+    @apply bg-white rounded-card shadow-card hover:shadow-lg transition-all duration-300 border border-gray-100;
+  }
+}
+
+/* Custom animations */
+@keyframes ken-burns {
+  from { transform: scale(1); }
+  to { transform: scale(1.15); }
+}
+
+.animate-ken-burns {
+  animation: ken-burns 20s ease-in-out infinite alternate;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 40s linear infinite;
+}
+
+.pause-animation:hover {
+  animation-play-state: paused;
+}
+
+/* Glass effect */
+.glass-header {
+  @apply bg-white/90 backdrop-blur-md;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-brand-green/30 rounded-full hover:bg-brand-green/50 transition-colors;
+}
