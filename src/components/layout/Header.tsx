@@ -31,8 +31,8 @@ const Header = () => {
     <header
       className={cn(
         "fixed top-0 left-0 w-full z-50 transition-all duration-500",
-        scrolled 
-          ? "bg-white/95 backdrop-blur-md shadow-lg py-2 border-b border-gray-100" 
+        scrolled
+          ? "bg-white/95 backdrop-blur-md shadow-lg py-2 border-b border-gray-100"
           : "bg-white py-4"
       )}
     >
@@ -41,7 +41,7 @@ const Header = () => {
           {/* Logo Section */}
           <Link href="/" className="flex items-center gap-3 group flex-shrink-0">
             <div className="w-12 h-12 bg-brand-green flex items-center justify-center rounded-sm transition-all duration-500 group-hover:rotate-6 group-hover:scale-110 shadow-md shadow-brand-green/20">
-               <span className="text-white font-black text-2xl italic tracking-tighter">HQ</span>
+              <span className="text-white font-black text-2xl italic tracking-tighter">HQ</span>
             </div>
             <div className="flex flex-col">
               <span className="text-2xl font-heading font-black text-brand-dark tracking-tighter leading-none group-hover:text-brand-green transition-colors">HQ HOME</span>
@@ -52,8 +52,8 @@ const Header = () => {
           {/* Desktop Nav Section - Center */}
           <ul className="hidden lg:flex items-center gap-0.5 xl:gap-1 flex-nowrap flex-grow justify-center px-2">
             {navLinks.map((link) => (
-              <li 
-                key={link.label} 
+              <li
+                key={link.label}
                 className="relative group"
                 onMouseEnter={() => link.children && setActiveDropdown(link.label)}
                 onMouseLeave={() => setActiveDropdown(null)}
@@ -62,8 +62,8 @@ const Header = () => {
                   href={link.href}
                   className={cn(
                     "flex items-center gap-1 py-4 px-1.5 xl:px-2.5 text-[11px] xl:text-[13px] font-extrabold uppercase tracking-tighter xl:tracking-widest transition-all duration-300 relative whitespace-nowrap",
-                    pathname === link.href 
-                      ? "text-brand-green" 
+                    pathname === link.href
+                      ? "text-brand-green"
                       : "text-brand-dark hover:text-brand-green"
                   )}
                 >
@@ -118,7 +118,7 @@ const Header = () => {
               </div>
               <div className="flex flex-col">
                 <span className="text-[10px] text-brand-muted font-bold uppercase tracking-widest opacity-60">Hotline 24/7</span>
-                <span className="text-[15px] font-black text-brand-dark group-hover:text-brand-green transition-colors tracking-tight">038 892 3333</span>
+                <span className="text-[15px] font-black text-brand-dark group-hover:text-brand-green transition-colors tracking-tight">0985 795 552</span>
               </div>
             </div>
             <Button href="/lien-he" className="text-[11px] px-6 py-3 shadow-md shadow-brand-green/20 hover:shadow-lg hover:shadow-brand-green/30">
@@ -182,7 +182,7 @@ const Header = () => {
                           {link.label}
                         </Link>
                         {link.children && (
-                           <button 
+                          <button
                             onClick={() => setActiveDropdown(activeDropdown === link.label ? null : link.label)}
                             className="p-3 text-brand-muted hover:text-brand-green transition-colors"
                           >
@@ -190,9 +190,9 @@ const Header = () => {
                           </button>
                         )}
                       </div>
-                      
+
                       {link.children && activeDropdown === link.label && (
-                        <motion.ul 
+                        <motion.ul
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
@@ -217,11 +217,11 @@ const Header = () => {
                 <div className="mt-12 pt-10 border-t border-gray-100 flex flex-col gap-8">
                   <div className="flex items-center gap-4 group">
                     <div className="w-12 h-12 bg-brand-green/10 text-brand-green rounded-full flex items-center justify-center">
-                       <Phone size={20} />
+                      <Phone size={20} />
                     </div>
                     <div className="flex flex-col">
-                       <span className="text-xs text-brand-muted font-bold uppercase tracking-widest opacity-60">Liên hệ ngay</span>
-                       <span className="text-xl font-black text-brand-dark tracking-tight">038 892 3333</span>
+                      <span className="text-xs text-brand-muted font-bold uppercase tracking-widest opacity-60">Liên hệ ngay</span>
+                      <span className="text-xl font-black text-brand-dark tracking-tight">0985 795 552</span>
                     </div>
                   </div>
                   <Button href="/lien-he" className="w-full h-14 text-[13px]">NHẬN BÁO GIÁ MIỄN PHÍ</Button>
