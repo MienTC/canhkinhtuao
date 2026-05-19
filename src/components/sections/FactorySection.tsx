@@ -16,15 +16,15 @@ export const FactorySection = () => {
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <div className="text-white order-2 lg:order-1">
             <div className="mb-4 flex items-center gap-3">
-               <div className="h-0.5 w-8 bg-brand-green" />
-               <span className="text-brand-green font-bold tracking-widest text-xs uppercase">Sản xuất trực tiếp</span>
+              <div className="h-0.5 w-8 bg-brand-green" />
+              <span className="text-brand-green font-bold tracking-widest text-xs uppercase">Sản xuất trực tiếp</span>
             </div>
-            
+
             <h2 className="text-4xl md:text-6xl font-heading font-black mb-10 leading-tight uppercase tracking-tighter">
               CHẤT LƯỢNG <br />
               <span className="text-brand-green">TẠO NIỀM TIN</span>
             </h2>
-            
+
             <ul className="grid gap-6 mb-12">
               {factoryPoints.map((point, index) => (
                 <li key={index} className="flex items-start gap-4 group">
@@ -35,20 +35,16 @@ export const FactorySection = () => {
                 </li>
               ))}
             </ul>
-            
+
             <Button href="/lien-he" className="h-14 px-10 group shadow-xl shadow-brand-green/10">
               THAM QUAN XƯỞNG <ChevronRight className="ml-2 group-hover:translate-x-2 transition-transform duration-300" />
             </Button>
           </div>
-          
+
           <div className="relative order-1 lg:order-2">
             <div className="relative aspect-video rounded-sm overflow-hidden shadow-2xl border-4 border-white/5 z-10 group">
-              <PlaceholderImage text="Xưởng sản xuất HQHOME" aspectRatio="h-full w-full" />
-              <div className="absolute inset-0 bg-brand-dark/20 group-hover:opacity-0 transition-opacity duration-700" />
+              <img src="/img14.jpg" alt="" />
             </div>
-            
-            {/* Decorative background frame */}
-            <div className="absolute -top-6 -right-6 w-full h-full border-2 border-brand-green opacity-20 z-0 hidden lg:block" />
           </div>
         </div>
       </div>

@@ -6,11 +6,6 @@ import { Phone, Mail, MapPin, Facebook, Youtube, Instagram, Send, ArrowRight } f
 const Footer = () => {
   return (
     <footer className="bg-brand-dark text-white pt-24 pb-10 relative overflow-hidden">
-      {/* Decorative Background Element */}
-      <div className="absolute top-0 right-0 opacity-[0.03] select-none pointer-events-none translate-x-1/4 -translate-y-1/4">
-         <span className="text-[400px] font-black italic italic tracking-tighter">HQ</span>
-      </div>
-
       <div className="container-custom relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 mb-20">
           {/* Col 1: Brand Info (3 columns) */}
@@ -46,7 +41,6 @@ const Footer = () => {
               {products.map((p) => (
                 <li key={p.id}>
                   <Link href={`/san-pham/${p.slug}`} className="text-white/40 hover:text-brand-green transition-colors text-sm font-bold uppercase tracking-wider flex items-center gap-3 group">
-                    <ArrowRight size={12} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all" />
                     {p.name}
                   </Link>
                 </li>
@@ -63,25 +57,25 @@ const Footer = () => {
             <ul className="flex flex-col gap-8">
               <li className="flex gap-4 group">
                 <div className="w-10 h-10 rounded-sm bg-white/5 flex items-center justify-center text-brand-green group-hover:bg-brand-green group-hover:text-white transition-all duration-300">
-                   <Phone size={18} />
+                  <Phone size={18} />
                 </div>
                 <div>
                   <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Hotline</p>
-                  <p className="text-[14px] font-black group-hover:text-brand-green transition-colors">038 892 3333</p>
+                  <p className="text-[14px] font-black group-hover:text-brand-green transition-colors">0985 795 552</p>
                 </div>
               </li>
               <li className="flex gap-4 group">
                 <div className="w-10 h-10 rounded-sm bg-white/5 flex items-center justify-center text-brand-green group-hover:bg-brand-green group-hover:text-white transition-all duration-300">
-                   <Mail size={18} />
+                  <Mail size={18} />
                 </div>
                 <div>
                   <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Email</p>
-                  <p className="text-[14px] font-black group-hover:text-brand-green transition-colors">info@hqhome.com</p>
+                  <p className="text-[14px] font-black group-hover:text-brand-green transition-colors">hqhome2003@gmail.com</p>
                 </div>
               </li>
               <li className="flex gap-4 group">
                 <div className="w-10 h-10 rounded-sm bg-white/5 flex items-center justify-center text-brand-green group-hover:bg-brand-green group-hover:text-white transition-all duration-300">
-                   <MapPin size={18} />
+                  <MapPin size={18} />
                 </div>
                 <div>
                   <p className="text-[10px] text-white/30 uppercase font-black tracking-widest mb-1">Địa chỉ</p>
@@ -103,24 +97,9 @@ const Footer = () => {
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
-                className="grayscale opacity-40 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700"
                 loading="lazy"
               ></iframe>
             </div>
-          </div>
-        </div>
-
-        {/* Bottom Footer */}
-        <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[11px] text-white/30 font-bold uppercase tracking-widest">
-            © 2024 HQHome Vietnam. Design by HQ Team.
-          </p>
-          <div className="flex gap-8">
-            {["Chính sách bảo mật", "Điều khoản dịch vụ"].map((text, i) => (
-              <Link key={i} href="#" className="text-[11px] text-white/30 font-bold uppercase tracking-widest hover:text-brand-green transition-colors">
-                {text}
-              </Link>
-            ))}
           </div>
         </div>
       </div>
